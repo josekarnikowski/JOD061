@@ -1,77 +1,1194 @@
 1. Verificar o endereçamento de um host.
 
 a) Abra o Prompt de Comando no Windows.
+Pronto, abri.
 
 b) Execute o comando ipconfig. Quais os endereços IPs da sua estação, da máscara de rede e do gateway padrão?
-
+   IPv4 Address. . . . . . . . . . . : 192.168.0.106
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.0.1
+   
 c) Calcule os endereços de rede IPv4 a partir do seu endereço IP da máscara de rede.
+ IP Ranges Reserved for Internal Use (Private Networks) :
+ Starting IP Address	Ending IP Address	Subnet Mask
+Class A	10.0.0.0	10.255.255.255	255.0.0.0
+Class B	172.16.0.0	172.31.255.255	255.255.0.0
+Class C	192.168.0.0	192.168.255.255	255.255.255.0
+Address:	25.10.156.60	00011001.00001010.10011100.   00111100
+Netmask:	255.255.255.0 = 24	11111111.11111111.11111111.   00000000
+Wildcard:	0.0.0.255	00000000.00000000.00000000.   11111111
+Network:	25.10.156.0	00011001.00001010.10011100.   00000000	(Class A)
+Broadcast:	25.10.156.255	00011001.00001010.10011100.   11111111
+HostMin:	25.10.156.1	00011001.00001010.10011100.   00000001
+HostMax:	25.10.156.254	00011001.00001010.10011100.   11111110
+Hosts/Net:	254	
 
 d) Execute o comando ipconfig/all. Quais as informações foram apresentadas a mais?
-
+Endereço fisico, DHCP, Configuraçao automatica, proxy, rotiamento de ip, tipo de nó, sufixo dns primario, descriçao de connections, IAID de DHCPv6, NetBIOS em Tcpip.
+Endereço fisico, DHCP, Configuraçao automatica, proxy, rotiamento de ip, tipo de nó, sufixo dns primario, descriçao de connections, IAID de DHCPv6, NetBIOS em Tcpip.
+Endereço fisico, DHCP, Configuraçao automatica, proxy, rotiamento de ip, tipo de nó, sufixo dns primario, descriçao de connections, IAID de DHCPv6, NetBIOS em Tcpip.
+Endereço fisico, DHCP, Configuraçao automatica, proxy, rotiamento de ip, tipo de nó, sufixo dns primario, descriçao de connections, IAID de DHCPv6, NetBIOS em Tcpip.
 e) Execute o comando ipconfig/release *Con*. Quai foi o resultado?
-
+No operation can be performed on Local Area Connection* 1 while it has its media disconnected.
+No operation can be performed on Local Area Connection* 2 while it has its media disconnected.
+No operation can be performed on Bluetooth Network Connection while it has its media disconnected.
 f) Execute o comando ipconfig/renew. Qual foi o resultado?
+C:\WINDOWS\system32>ipconfig/renew
 
+Windows IP Configuration
+
+No operation can be performed on Ethernet 2 while it has its media disconnected.
+No operation can be performed on Local Area Connection* 1 while it has its media disconnected.
+No operation can be performed on Local Area Connection* 2 while it has its media disconnected.
+No operation can be performed on Bluetooth Network Connection while it has its media disconnected.
+
+Ethernet adapter Ethernet 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Ethernet adapter Hamachi:
+
+   Connection-specific DNS Suffix  . :
+   IPv6 Address. . . . . . . . . . . : 2620:9b::190a:9c3c
+   Link-local IPv6 Address . . . . . : fe80::2006:5b44:8558:23c8%8
+   IPv4 Address. . . . . . . . . . . : 25.10.156.60
+   Subnet Mask . . . . . . . . . . . : 255.0.0.0
+   Default Gateway . . . . . . . . . : 2620:9b::1900:1
+                                       25.0.0.1
+
+Wireless LAN adapter Local Area Connection* 1:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Local Area Connection* 2:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::88c9:234a:3bf5:5043%5
+   IPv4 Address. . . . . . . . . . . : 192.168.0.106
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.0.1
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
 g) Execute o comando ipconfig/displaydns. Quai foi o resultado?
+Windows IP Configuration
 
+    link.wacom.com
+    ----------------------------------------
+    Record Name . . . . . : link.wacom.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 408
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 104.130.29.173
+
+
+    c-ring.msedge.net
+    ----------------------------------------
+    Record Name . . . . . : c-ring.msedge.net
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 36
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : c-ring.c-9999.c-msedge.net
+
+
+    Record Name . . . . . : c-ring.c-9999.c-msedge.net
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 36
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : c-9999.c-msedge.net
+
+
+    Record Name . . . . . : c-9999.c-msedge.net
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 36
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 13.107.4.254
+
+
+    www.bing.com
+    ----------------------------------------
+    Record Name . . . . . : www.bing.com
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 48
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : a-0001.a-afdentry.net.trafficmanager.net
+
+
+    Record Name . . . . . : a-0001.a-afdentry.net.trafficmanager.net
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 48
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : dual-a-0001.a-msedge.net
+
+
+    Record Name . . . . . : dual-a-0001.a-msedge.net
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 48
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 204.79.197.200
+
+
+    Record Name . . . . . : dual-a-0001.a-msedge.net
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 48
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 13.107.21.200
+
+
+    cm1-iad1.cm.steampowered.com
+    ----------------------------------------
+    Record Name . . . . . : cm1-iad1.cm.steampowered.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 6446
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 162.254.192.100
+
+
+    cm01-ord.cm.steampowered.com
+    ----------------------------------------
+    Record Name . . . . . : cm01-ord.cm.steampowered.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 6351
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 162.254.193.6
+
+
+    cm4-iad1.cm.steampowered.com
+    ----------------------------------------
+    Record Name . . . . . : cm4-iad1.cm.steampowered.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 6388
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 162.254.192.109
+
+
+    static.xx.fbcdn.net
+    ----------------------------------------
+    Record Name . . . . . : static.xx.fbcdn.net
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 18
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : scontent.xx.fbcdn.net
+
+
+    Record Name . . . . . : scontent.xx.fbcdn.net
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 18
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 157.240.222.14
+
+
+    substrate.office.com
+    ----------------------------------------
+    Record Name . . . . . : substrate.office.com
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 22
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : substrate.ms-acdc.office.com
+
+
+    Record Name . . . . . : substrate.ms-acdc.office.com
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 22
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : afd-k.office.com
+
+
+    Record Name . . . . . : afd-k.office.com
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 22
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : outlook-office-com.k-0002.k-msedge.net
+
+
+    Record Name . . . . . : outlook-office-com.k-0002.k-msedge.net
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 22
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : outlook.ha.office365.com
+
+
+    Record Name . . . . . : outlook.ha.office365.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 22
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 52.97.71.82
+
+
+    Record Name . . . . . : outlook.ha.office365.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 22
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 52.97.0.226
+
+
+    Record Name . . . . . : outlook.ha.office365.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 22
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 52.97.71.162
+
+
+    Record Name . . . . . : outlook.ha.office365.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 22
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 52.97.3.178
+
+
+    Record Name . . . . . : outlook.ha.office365.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 22
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 52.97.67.130
+
+
+    Record Name . . . . . : outlook.ha.office365.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 22
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 52.97.67.66
+
+
+    Record Name . . . . . : outlook.ha.office365.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 22
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 52.97.64.194
+
+
+    Record Name . . . . . : outlook.ha.office365.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 22
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 52.97.67.98
+
+
+    ctldl.windowsupdate.com
+    ----------------------------------------
+    Record Name . . . . . : ctldl.windowsupdate.com
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 223
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : audownload.windowsupdate.nsatc.net
+
+
+    Record Name . . . . . : audownload.windowsupdate.nsatc.net
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 223
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : auto.au.download.windowsupdate.com.c.footprint.net
+
+
+    Record Name . . . . . : auto.au.download.windowsupdate.com.c.footprint.net
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 223
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 67.24.1.254
+
+
+    Record Name . . . . . : auto.au.download.windowsupdate.com.c.footprint.net
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 223
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 8.241.214.126
+
+
+    Record Name . . . . . : auto.au.download.windowsupdate.com.c.footprint.net
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 223
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 8.241.216.126
+
+
+    cm3-lax1.cm.steampowered.com
+    ----------------------------------------
+    Record Name . . . . . : cm3-lax1.cm.steampowered.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 7855
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 162.254.195.82
+
+
+    cm3-iad1.cm.steampowered.com
+    ----------------------------------------
+    Record Name . . . . . : cm3-iad1.cm.steampowered.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 6129
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 162.254.192.108
+
+
+    github.com
+    ----------------------------------------
+    Record Name . . . . . : github.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 2
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 13.237.44.5
+
+
+    cm03-ord.cm.steampowered.com
+    ----------------------------------------
+    Record Name . . . . . : cm03-ord.cm.steampowered.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 6515
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 162.254.193.46
+
+
+    www.google-analytics.com
+    ----------------------------------------
+    Record Name . . . . . : www.google-analytics.com
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 140
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : www-google-analytics.l.google.com
+
+
+    Record Name . . . . . : www-google-analytics.l.google.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 140
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 172.217.29.14
+
+
+    cm2-iad1.cm.steampowered.com
+    ----------------------------------------
+    Record Name . . . . . : cm2-iad1.cm.steampowered.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 5561
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 162.254.192.101
+
+
+    cm1-lim1.cm.steampowered.com
+    ----------------------------------------
+    Record Name . . . . . : cm1-lim1.cm.steampowered.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 5995
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 190.217.33.68
+
+
+    ocsp.digicert.com
+    ----------------------------------------
+    Record Name . . . . . : ocsp.digicert.com
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 1921
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : cs9.wac.phicdn.net
+
+
+    Record Name . . . . . : cs9.wac.phicdn.net
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 1921
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 192.16.58.8
+
+
+    a-ring.msedge.net
+    ----------------------------------------
+    Record Name . . . . . : a-ring.msedge.net
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 49
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : a-ring.a-9999.a-msedge.net
+
+
+    Record Name . . . . . : a-ring.a-9999.a-msedge.net
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 49
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : a-9999.a-msedge.net
+
+
+    Record Name . . . . . : a-9999.a-msedge.net
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 49
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 204.79.197.254
+
+
+    cdn.discordapp.com
+    ----------------------------------------
+    Record Name . . . . . : cdn.discordapp.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 175
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 162.159.134.233
+
+
+    Record Name . . . . . : cdn.discordapp.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 175
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 162.159.133.233
+
+
+    Record Name . . . . . : cdn.discordapp.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 175
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 162.159.135.233
+
+
+    Record Name . . . . . : cdn.discordapp.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 175
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 162.159.130.233
+
+
+    Record Name . . . . . : cdn.discordapp.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 175
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 162.159.129.233
+
+
+    calculadoraip.com.br
+    ----------------------------------------
+    Record Name . . . . . : calculadoraip.com.br
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 262
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 35.236.73.22
+
+
+    cm1-lax1.cm.steampowered.com
+    ----------------------------------------
+    Record Name . . . . . : cm1-lax1.cm.steampowered.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 7515
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 162.254.195.66
+
+
+    chrome.google.com
+    ----------------------------------------
+    Record Name . . . . . : chrome.google.com
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 163
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : www3.l.google.com
+
+
+    Record Name . . . . . : www3.l.google.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 163
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 172.217.28.238
+
+
+    cm2-gru1.cm.steampowered.com
+    ----------------------------------------
+    Record Name . . . . . : cm2-gru1.cm.steampowered.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 5326
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 205.185.194.213
+
+
+    clients4.google.com
+    ----------------------------------------
+    Record Name . . . . . : clients4.google.com
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 99
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : clients.l.google.com
+
+
+    Record Name . . . . . : clients.l.google.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 99
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 172.217.30.78
+
+
+    github.githubassets.com
+    ----------------------------------------
+    Record Name . . . . . : github.githubassets.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 2191
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 185.199.110.154
+
+
+    Record Name . . . . . : github.githubassets.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 2191
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 185.199.111.154
+
+
+    Record Name . . . . . : github.githubassets.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 2191
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 185.199.108.154
+
+
+    Record Name . . . . . : github.githubassets.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 2191
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 185.199.109.154
+
+
+    www.facebook.com
+    ----------------------------------------
+    Record Name . . . . . : www.facebook.com
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 17
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : star-mini.c10r.facebook.com
+
+
+    Record Name . . . . . : star-mini.c10r.facebook.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 17
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 157.240.222.35
+
+
+    fp-as.azureedge.net
+    ----------------------------------------
+    Record Name . . . . . : fp-as.azureedge.net
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 1
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : fp-as.akstd.azureedge.net
+
+
+    Record Name . . . . . : fp-as.akstd.azureedge.net
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 1
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : azureedge.mdc.akamaized.net
+
+
+    Record Name . . . . . : azureedge.mdc.akamaized.net
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 1
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : a1879.dscw14.akamai.net
+
+
+    Record Name . . . . . : a1879.dscw14.akamai.net
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 1
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 65.158.180.112
+
+
+    Record Name . . . . . : a1879.dscw14.akamai.net
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 1
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 65.158.180.138
 h) Execute o comando ipconfig/flushdns em seguida o comando ipconfig/displaydns. Quai foi o resultado?
+Windows IP Configuration
 
+Successfully flushed the DNS Resolver Cache.
+
+C:\WINDOWS\system32>ipconfig/displaydns
+
+Windows IP Configuration
+
+    update.googleapis.com
+    ----------------------------------------
+    Record Name . . . . . : update.googleapis.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 103
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 172.217.30.163
+
+
+    clients4.google.com
+    ----------------------------------------
+    Record Name . . . . . : clients4.google.com
+    Record Type . . . . . : 5
+    Time To Live  . . . . : 208
+    Data Length . . . . . : 8
+    Section . . . . . . . : Answer
+    CNAME Record  . . . . : clients.l.google.com
+
+
+    Record Name . . . . . : clients.l.google.com
+    Record Type . . . . . : 1
+    Time To Live  . . . . : 208
+    Data Length . . . . . : 4
+    Section . . . . . . . : Answer
+    A (Host) Record . . . : 216.58.202.142
 
 
 2. Testar a conectividade física entre dois hosts.
 
 a) Execute o comando ping seguido do endereço IP da sua estação, identificado no item anterior. Qual foi o resultado?
+Pinging 25.10.156.60 with 32 bytes of data:
+Reply from 25.10.156.60: bytes=32 time<1ms TTL=128
+Reply from 25.10.156.60: bytes=32 time<1ms TTL=128
+Reply from 25.10.156.60: bytes=32 time<1ms TTL=128
+Reply from 25.10.156.60: bytes=32 time<1ms TTL=128
 
+Ping statistics for 25.10.156.60:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
 b) Execute novamente o comando anterior acrescentando o parametro -t. Qual foi o resultado?
+Reply from 25.10.156.60: bytes=32 time<1ms TTL=128 por toda eternidade da existencia humana.
 
 c) Execute o comando ping seguido do endereço de loopback. Qual foi o resultado?
+Pinging MSI [::1] with 32 bytes of data:
+Reply from ::1: time<1ms
+Reply from ::1: time<1ms
+Reply from ::1: time<1ms
+Reply from ::1: time<1ms
 
+Ping statistics for ::1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+    
 d) Execute o comando ping seguido do endereço do gateway padrão. Qual foi o resultado? 
+Pinging 192.168.0.1 with 32 bytes of data:
+Reply from 192.168.0.1: bytes=32 time=2ms TTL=64
+Reply from 192.168.0.1: bytes=32 time=1ms TTL=64
+Reply from 192.168.0.1: bytes=32 time=1ms TTL=64
+Reply from 192.168.0.1: bytes=32 time=1ms TTL=64
+
+Ping statistics for 192.168.0.1:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 2ms, Average = 1ms
 
 e) Execute o comando ping seguido do nome da sua estação. Qual foi o resultado?
+Pinging MSI [fe80::2006:5b44:8558:23c8%8] with 32 bytes of data:
+Reply from fe80::2006:5b44:8558:23c8%8: time<1ms
+Reply from fe80::2006:5b44:8558:23c8%8: time<1ms
+Reply from fe80::2006:5b44:8558:23c8%8: time<1ms
+Reply from fe80::2006:5b44:8558:23c8%8: time<1ms
+
+Ping statistics for fe80::2006:5b44:8558:23c8%8:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
 
 f) Execute o comando ping seguido do host www.iesb.br. Qual foi o resultado?
+Pinging www.iesb.br [54.174.194.96] with 32 bytes of data:
+Reply from 54.174.194.96: bytes=32 time=144ms TTL=97
+Reply from 54.174.194.96: bytes=32 time=153ms TTL=97
+Reply from 54.174.194.96: bytes=32 time=144ms TTL=97
+Reply from 54.174.194.96: bytes=32 time=145ms TTL=97
 
+Ping statistics for 54.174.194.96:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 144ms, Maximum = 153ms, Average = 146ms
+    
 g) Execute o comando ping seguido do host intranet.iesb.br. Qual foi o resultado?
-
+ping
+Ping request could not find host intranet.iesb.br. Please check the name and try again.
 
 
 3. Resolver nomes dos hosts para achar os endereços IP.
 
 a) Execute o comando nslookup seguido do endereço IP da sua estação. Qual foi o resultado?
+Server:  UnKnown
+Address:  192.168.0.1
+
+*** UnKnown can't find 192.168.0.106: Non-existent domain
 
 b) Execute o comando nslookup seguido do nome da sua estação. Qual foi o resultado?
+Server:  UnKnown
+Address:  192.168.0.1
+
+DNS request timed out.
+    timeout was 2 seconds.
+*** Request to UnKnown timed-out
 
 c) Execute o comando nslookup seguido do host www.iesb.br. Qual foi o resultado?
+Server:  UnKnown
+Address:  192.168.0.1
+
+Non-authoritative answer:
+Name:    www.iesb.br
+Address:  54.174.194.96
 
 d) Execute o comando nslookup seguido do host intranet.iesb.br. Qual foi o resultado?
+Server:  UnKnown
+Address:  192.168.0.1
 
+*** UnKnown can't find intranet.iesb.br: Non-existent domain
 
 
 4. Verificar rotas entre dois hosts.
 
 a) Execute o comando tracert seguido do endereço IP da sua estação. Quantos saltos foram realizados? O destino foi alcançado? 
+Tracing route to MSI [192.168.0.106]
+over a maximum of 30 hops:
+
+  1    <1 ms    <1 ms    <1 ms  MSI [192.168.0.106]
+
+Trace complete.
 
 b) Execute o comando tracert seguido do endereço do gateway padrão. Quantos saltos foram realizados? O destino foi alcançado?
+Tracing route to 192.168.0.1 over a maximum of 30 hops
+
+  1     4 ms     4 ms     1 ms  192.168.0.1
+
+Trace complete.
+
+Foram 30 saltos.
 
 c) Execute o comando tracert www.iesb.br para verificar o roteamento de pacotes. Qual foi o resultado? O destino foi alcançado?
+Tracing route to www.iesb.br [54.174.194.96]
+over a maximum of 30 hops:
+
+  1     4 ms     1 ms     1 ms  192.168.0.1
+  2     3 ms     5 ms     2 ms  172.25.50.2
+  3     5 ms     2 ms     1 ms  172.16.20.253
+  4     3 ms    10 ms     4 ms  172.16.30.173
+  5     4 ms     2 ms     3 ms  45.165.196.17
+  6     3 ms     2 ms     2 ms  45.165.196.249
+  7    24 ms     4 ms     8 ms  200-146-236-018.xf-static.ctbcnetsuper.com.br [200.146.236.18]
+  8     4 ms     3 ms     7 ms  100.126.4.134
+  9    18 ms    17 ms    24 ms  100.126.0.133
+ 10    19 ms    17 ms    22 ms  ae3-0.ptx-b.spo-piaf.algartelecom.com.br [170.84.32.6]
+ 11   120 ms   122 ms   123 ms  et-11-0-5-0.monet.border-b.mia.algartelecom.com.br [168.197.23.145]
+ 12   121 ms   120 ms   121 ms  99.82.176.112
+ 13   123 ms   122 ms   122 ms  52.93.37.83
+ 14   121 ms   121 ms   119 ms  52.93.37.66
+ 15     *        *        *     Request timed out.
+ 16     *        *        *     Request timed out.
+ 17     *        *        *     Request timed out.
+ 18     *        *        *     Request timed out.
+ 19     *        *        *     Request timed out.
+ 20   148 ms   146 ms   145 ms  54.239.42.192
+ 21     *        *        *     Request timed out.
+ 22     *        *        *     Request timed out.
+ 23     *        *        *     Request timed out.
+ 24     *        *        *     Request timed out.
+ 25     *        *        *     Request timed out.
+ 26     *        *        *     Request timed out.
+ 27     *        *        *     Request timed out.
+ 28     *        *        *     Request timed out.
+ 29     *        *        *     Request timed out.
+ 30     *        *        *     Request timed out.
+
+Trace complete.
 
 d) Execute o comando tracert intranet.iesb.br. Qual foi o resultado? O destino foi alcançado?
+Unable to resolve target system name intranet.iesb.br.
+
+Tracing route to www.iesb.br [54.174.194.96]
+over a maximum of 30 hops:
+
+  1     4 ms     1 ms     1 ms  192.168.0.1
+  2     3 ms     5 ms     2 ms  172.25.50.2
+  3     5 ms     2 ms     1 ms  172.16.20.253
+  4     3 ms    10 ms     4 ms  172.16.30.173
+  5     4 ms     2 ms     3 ms  45.165.196.17
+  6     3 ms     2 ms     2 ms  45.165.196.249
+  7    24 ms     4 ms     8 ms  200-146-236-018.xf-static.ctbcnetsuper.com.br [200.146.236.18]
+  8     4 ms     3 ms     7 ms  100.126.4.134
+  9    18 ms    17 ms    24 ms  100.126.0.133
+ 10    19 ms    17 ms    22 ms  ae3-0.ptx-b.spo-piaf.algartelecom.com.br [170.84.32.6]
+ 11   120 ms   122 ms   123 ms  et-11-0-5-0.monet.border-b.mia.algartelecom.com.br [168.197.23.145]
+ 12   121 ms   120 ms   121 ms  99.82.176.112
+ 13   123 ms   122 ms   122 ms  52.93.37.83
+ 14   121 ms   121 ms   119 ms  52.93.37.66
+ 15     *        *        *     Request timed out.
+ 16     *        *        *     Request timed out.
+ 17     *        *        *     Request timed out.
+ 18     *        *        *     Request timed out.
+ 19     *        *        *     Request timed out.
+ 20   148 ms   146 ms   145 ms  54.239.42.192
+ 21     *        *        *     Request timed out.
+ 22     *        *        *     Request timed out.
+ 23     *        *        *     Request timed out.
+ 24     *        *        *     Request timed out.
+ 25     *        *        *     Request timed out.
+ 26     *        *        *     Request timed out.
+ 27     *        *        *     Request timed out.
+ 28     *        *        *     Request timed out.
+ 29     *        *        *     Request timed out.
+ 30     *        *        *     Request timed out.
+
+Trace complete.
 
 e) Execute o comando tracert helpdesk.iesb.br. Qual foi o resultado? O destino foi alcançado?
+Tracing route to helpdesk.iesb.br [186.251.61.127]
+over a maximum of 30 hops:
 
+  1     2 ms     1 ms     1 ms  192.168.0.1
+  2     3 ms     3 ms     1 ms  172.25.50.2
+  3     2 ms     1 ms     2 ms  172.16.20.253
+  4     2 ms     2 ms     2 ms  172.16.30.149
+  5     3 ms     2 ms     2 ms  45.165.196.17
+  6     2 ms     3 ms     3 ms  217.36.125.189.static.impsat.net.br [189.125.36.217]
+  7     9 ms    10 ms     9 ms  214.255.125.189.static.impsat.net.br [189.125.255.214]
+  8    10 ms     9 ms     9 ms  45.171.103.234
+  9     *        *        *     Request timed out.
+ 10     *        *        *     Request timed out.
+ 11     *        *        *     Request timed out.
+ 12     *        *        *     Request timed out.
+ 13     *        *        *     Request timed out.
+ 14     *        *        *     Request timed out.
+ 15     *        *        *     Request timed out.
+ 16     *        *        *     Request timed out.
+ 17     *        *        *     Request timed out.
+ 18     *        *        *     Request timed out.
+ 19     *        *        *     Request timed out.
+ 20     *        *        *     Request timed out.
+ 21     *        *        *     Request timed out.
+ 22     *        *        *     Request timed out.
+ 23     *        *        *     Request timed out.
+ 24     *        *        *     Request timed out.
+ 25     *        *        *     Request timed out.
+ 26     *        *        *     Request timed out.
+ 27     *        *        *     Request timed out.
+ 28     *        *        *     Request timed out.
+ 29     *        *        *     Request timed out.
+ 30     *        *        *     Request timed out.
+
+Trace complete.
 
 
 5. Verificar as conexões estabelecidas pelo host.
 
 a) Execute o comando netstat. Qual foi o resultado?
+Active Connections
 
+  Proto  Local Address          Foreign Address        State
+  TCP    127.0.0.1:49683        MSI:65001              ESTABLISHED
+  TCP    127.0.0.1:49685        MSI:49713              ESTABLISHED
+  TCP    127.0.0.1:49713        MSI:49685              ESTABLISHED
+  TCP    127.0.0.1:65001        MSI:49683              ESTABLISHED
+  TCP    192.168.0.106:54529    52.177.166.224:https   ESTABLISHED
+  TCP    192.168.0.106:54530    a104-104-130-13:https  CLOSE_WAIT
+  TCP    192.168.0.106:54560    205.185.194.213:27025  ESTABLISHED
+  TCP    192.168.0.106:54569    162.159.136.234:https  ESTABLISHED
+  TCP    192.168.0.106:54579    47:https               ESTABLISHED
+  TCP    192.168.0.106:54627    ce-in-f188:5228        ESTABLISHED
+  TCP    192.168.0.106:54752    162.159.129.235:https  ESTABLISHED
+  TCP    192.168.0.106:55258    h-app03-01:12975       ESTABLISHED
+  TCP    192.168.0.106:55728    162.159.133.233:https  ESTABLISHED
+  TCP    192.168.0.106:55953    20.36.219.28:https     TIME_WAIT
+  TCP    192.168.0.106:55979    20.36.219.28:https     TIME_WAIT
+  TCP    192.168.0.106:55992    40.90.23.208:https     TIME_WAIT
+  TCP    192.168.0.106:55997    53:https               TIME_WAIT
+  TCP    192.168.0.106:55998    53:https               TIME_WAIT
+  TCP    192.168.0.106:55999    53:https               TIME_WAIT
+  TCP    192.168.0.106:56000    53:https               TIME_WAIT
+  TCP    192.168.0.106:56001    53:https               TIME_WAIT
+  TCP    192.168.0.106:56006    200.123.197.147:http   TIME_WAIT
+  TCP    192.168.0.106:56022    8.241.198.254:http     TIME_WAIT
+  TCP    192.168.0.106:56045    20.36.219.28:https     ESTABLISHED
+  TCP    192.168.0.106:56046    a-0001:https           ESTABLISHED
+  TCP    192.168.0.106:56047    52.97.71.82:https      ESTABLISHED
+  TCP    192.168.0.106:56048    52.97.71.82:https      ESTABLISHED
+  TCP    192.168.0.106:56049    ec2-13-237-44-5:https  ESTABLISHED
+  TCP    192.168.0.106:56050    ec2-13-237-44-5:https  ESTABLISHED
+  TCP    192.168.0.106:56051    185.199.108.154:https  ESTABLISHED
+  TCP    192.168.0.106:56052    13.107.42.14:https     ESTABLISHED
+  TCP    192.168.0.106:56053    204.79.197.254:https   ESTABLISHED
+  TCP    192.168.0.106:56054    204.79.197.222:https   ESTABLISHED
+  TCP    192.168.0.106:56055    204.79.197.222:https   ESTABLISHED
+  TCP    192.168.0.106:56056    22:http                ESTABLISHED
+  TCP    192.168.0.106:56057    22:http                ESTABLISHED
+  
 b) Execute o comando netstat -n. Qual foi o resultado? Notou algo diferente?
+Active Connections
+
+  Proto  Local Address          Foreign Address        State
+  TCP    127.0.0.1:49683        127.0.0.1:65001        ESTABLISHED
+  TCP    127.0.0.1:49685        127.0.0.1:49713        ESTABLISHED
+  TCP    127.0.0.1:49713        127.0.0.1:49685        ESTABLISHED
+  TCP    127.0.0.1:65001        127.0.0.1:49683        ESTABLISHED
+  TCP    192.168.0.106:54529    52.177.166.224:443     ESTABLISHED
+  TCP    192.168.0.106:54530    104.104.130.13:443     CLOSE_WAIT
+  TCP    192.168.0.106:54560    205.185.194.213:27025  ESTABLISHED
+  TCP    192.168.0.106:54569    162.159.136.234:443    ESTABLISHED
+  TCP    192.168.0.106:54579    35.186.224.47:443      ESTABLISHED
+  TCP    192.168.0.106:54627    64.233.190.188:5228    ESTABLISHED
+  TCP    192.168.0.106:54752    162.159.129.235:443    ESTABLISHED
+  TCP    192.168.0.106:55258    64.74.17.208:12975     ESTABLISHED
+  TCP    192.168.0.106:55728    162.159.133.233:443    ESTABLISHED
+  TCP    192.168.0.106:56105    20.36.219.28:443       ESTABLISHED
+  TCP    192.168.0.106:56106    52.64.108.95:443       ESTABLISHED
+  TCP    192.168.0.106:56107    52.64.108.95:443       ESTABLISHED
+  TCP    192.168.0.106:56108    185.199.108.154:443    ESTABLISHED
+  
+  Tem menos protos e foi mais rápido.
 
 c) Execute o comando netstat -na. Qual foi o resultado? Notou algo diferente?
+Active Connections
 
+  Proto  Local Address          Foreign Address        State
+  TCP    0.0.0.0:135            0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:445            0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:5040           0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:27036          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49664          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49665          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49666          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49667          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49668          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49680          0.0.0.0:0              LISTENING
+  TCP    25.10.156.60:139       0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:3213         0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:6463         0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:27060        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:49683        127.0.0.1:65001        ESTABLISHED
+  TCP    127.0.0.1:49685        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:49685        127.0.0.1:49713        ESTABLISHED
+  TCP    127.0.0.1:49713        127.0.0.1:49685        ESTABLISHED
+  TCP    127.0.0.1:49753        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:49754        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:65001        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:65001        127.0.0.1:49683        ESTABLISHED
+  TCP    192.168.0.106:139      0.0.0.0:0              LISTENING
+  TCP    192.168.0.106:54529    52.177.166.224:443     ESTABLISHED
+  TCP    192.168.0.106:54530    104.104.130.13:443     CLOSE_WAIT
+  TCP    192.168.0.106:54560    205.185.194.213:27025  ESTABLISHED
+  TCP    192.168.0.106:54569    162.159.136.234:443    ESTABLISHED
+  TCP    192.168.0.106:54579    35.186.224.47:443      ESTABLISHED
+  TCP    192.168.0.106:54627    64.233.190.188:5228    ESTABLISHED
+  TCP    192.168.0.106:54752    162.159.129.235:443    ESTABLISHED
+  TCP    192.168.0.106:55258    64.74.17.208:12975     ESTABLISHED
+  TCP    192.168.0.106:55728    162.159.133.233:443    ESTABLISHED
+  TCP    192.168.0.106:56105    20.36.219.28:443       ESTABLISHED
+  TCP    192.168.0.106:56113    185.199.108.154:443    ESTABLISHED
+  TCP    192.168.0.106:56114    13.237.44.5:443        ESTABLISHED
+  TCP    192.168.0.106:56115    13.237.44.5:443        ESTABLISHED
+  TCP    [::]:135               [::]:0                 LISTENING
+  TCP    [::]:445               [::]:0                 LISTENING
+  TCP    [::]:49664             [::]:0                 LISTENING
+  TCP    [::]:49665             [::]:0                 LISTENING
+  TCP    [::]:49666             [::]:0                 LISTENING
+  TCP    [::]:49667             [::]:0                 LISTENING
+  TCP    [::]:49668             [::]:0                 LISTENING
+  TCP    [::]:49680             [::]:0                 LISTENING
+  UDP    0.0.0.0:500            *:*
+  UDP    0.0.0.0:3702           *:*
+  UDP    0.0.0.0:3702           *:*
+  UDP    0.0.0.0:4500           *:*
+  UDP    0.0.0.0:5050           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5355           *:*
+  UDP    0.0.0.0:27036          *:*
+  UDP    0.0.0.0:49481          *:*
+  UDP    0.0.0.0:51735          *:*
+  UDP    0.0.0.0:57294          *:*
+  UDP    0.0.0.0:59160          *:*
+  UDP    0.0.0.0:59791          *:*
+  UDP    0.0.0.0:59962          *:*
+  UDP    0.0.0.0:62848          *:*
+  UDP    25.10.156.60:137       *:*
+  UDP    25.10.156.60:138       *:*
+  UDP    25.10.156.60:1900      *:*
+  UDP    25.10.156.60:2177      *:*
+  UDP    25.10.156.60:5353      *:*
+  UDP    25.10.156.60:59815     *:*
+  UDP    127.0.0.1:1900         *:*
+  UDP    127.0.0.1:10010        *:*
+  UDP    127.0.0.1:10011        *:*
+  UDP    127.0.0.1:49667        *:*
+  UDP    127.0.0.1:59817        *:*
+  UDP    127.0.0.1:64496        *:*
+  UDP    192.168.0.106:137      *:*
+  UDP    192.168.0.106:138      *:*
+  UDP    192.168.0.106:1900     *:*
+  UDP    192.168.0.106:2177     *:*
+  UDP    192.168.0.106:5353     *:*
+  UDP    192.168.0.106:59816    *:*
+  UDP    192.168.0.106:63174    *:*
+  UDP    [::]:500               *:*
+  UDP    [::]:3702              *:*
+  UDP    [::]:3702              *:*
+  UDP    [::]:4500              *:*
+  UDP    [::]:5353              *:*
+  UDP    [::]:5353              *:*
+  UDP    [::]:5353              *:*
+  UDP    [::]:5355              *:*
+  UDP    [::]:49482             *:*
+  UDP    [::]:51736             *:*
+  UDP    [::1]:1900             *:*
+  UDP    [::1]:5353             *:*
+  UDP    [::1]:59814            *:*
+  UDP    [2620:9b::190a:9c3c]:2177  *:*
+  UDP    [fe80::2006:5b44:8558:23c8%8]:1900  *:*
+  UDP    [fe80::2006:5b44:8558:23c8%8]:2177  *:*
+  UDP    [fe80::2006:5b44:8558:23c8%8]:59812  *:*
+  UDP    [fe80::88c9:234a:3bf5:5043%5]:1900  *:*
+  UDP    [fe80::88c9:234a:3bf5:5043%5]:2177  *:*
+  UDP    [fe80::88c9:234a:3bf5:5043%5]:59813  *:*
+  
+  Mais Protos e mais veloz.
+  
 d) Execute o comando netstat -nap TCP. Qual foi o resultado? Notou algo diferente?
+Active Connections
 
+  Proto  Local Address          Foreign Address        State
+  TCP    0.0.0.0:135            0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:445            0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:5040           0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:27036          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49664          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49665          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49666          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49667          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49668          0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:49680          0.0.0.0:0              LISTENING
+  TCP    25.10.156.60:139       0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:3213         0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:6463         0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:27060        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:49683        127.0.0.1:65001        ESTABLISHED
+  TCP    127.0.0.1:49685        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:49685        127.0.0.1:49713        ESTABLISHED
+  TCP    127.0.0.1:49713        127.0.0.1:49685        ESTABLISHED
+  TCP    127.0.0.1:49753        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:49754        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:65001        0.0.0.0:0              LISTENING
+  TCP    127.0.0.1:65001        127.0.0.1:49683        ESTABLISHED
+  TCP    192.168.0.106:139      0.0.0.0:0              LISTENING
+  TCP    192.168.0.106:54529    52.177.166.224:443     ESTABLISHED
+  TCP    192.168.0.106:54530    104.104.130.13:443     CLOSE_WAIT
+  TCP    192.168.0.106:54560    205.185.194.213:27025  ESTABLISHED
+  TCP    192.168.0.106:54569    162.159.136.234:443    ESTABLISHED
+  TCP    192.168.0.106:54579    35.186.224.47:443      ESTABLISHED
+  TCP    192.168.0.106:54627    64.233.190.188:5228    ESTABLISHED
+  TCP    192.168.0.106:54752    162.159.129.235:443    ESTABLISHED
+  TCP    192.168.0.106:55258    64.74.17.208:12975     ESTABLISHED
+  TCP    192.168.0.106:55728    162.159.133.233:443    ESTABLISHED
+  TCP    192.168.0.106:56105    20.36.219.28:443       ESTABLISHED
+  TCP    192.168.0.106:56118    13.237.44.5:443        ESTABLISHED
+  TCP    192.168.0.106:56119    13.237.44.5:443        ESTABLISHED
+  TCP    192.168.0.106:56120    185.199.108.154:443    ESTABLISHED
+  TCP    192.168.0.106:56122    35.236.73.22:80        ESTABLISHED
+  TCP    192.168.0.106:56123    35.236.73.22:80        ESTABLISHED
+  
 e) Execute o comando netstat -nap UDP. Qual foi o resultado? Notou algo diferente?
-
+UDP    0.0.0.0:500            *:*
+  UDP    0.0.0.0:3702           *:*
+  UDP    0.0.0.0:3702           *:*
+  UDP    0.0.0.0:4500           *:*
+  UDP    0.0.0.0:5050           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5355           *:*
+  UDP    0.0.0.0:27036          *:*
+  UDP    0.0.0.0:49481          *:*
+  UDP    0.0.0.0:51735          *:*
+  UDP    0.0.0.0:53606          *:*
+  UDP    0.0.0.0:57294          *:*
+  UDP    0.0.0.0:59160          *:*
+  UDP    0.0.0.0:59791          *:*
+  UDP    0.0.0.0:59962          *:*
+  UDP    25.10.156.60:137       *:*
+  UDP    25.10.156.60:138       *:*
+  UDP    25.10.156.60:1900      *:*
+  UDP    25.10.156.60:2177      *:*
+  UDP    25.10.156.60:5353      *:*
+  UDP    25.10.156.60:59815     *:*
+  UDP    127.0.0.1:1900         *:*
+  UDP    127.0.0.1:10010        *:*
+  UDP    127.0.0.1:10011        *:*
+  UDP    127.0.0.1:49667        *:*
+  UDP    127.0.0.1:59817        *:*
+  UDP    127.0.0.1:64496        *:*
+  UDP    192.168.0.106:137      *:*
+  UDP    192.168.0.106:138      *:*
+  UDP    192.168.0.106:1900     *:*
+  UDP    192.168.0.106:2177     *:*
+  UDP    192.168.0.106:5353     *:*
+  UDP    192.168.0.106:59816    *:*
+  UDP    192.168.0.106:63174    *:*
+  
 f) Abra a página do IESB (www.iesb.br) no navegador. Tente identificar o socket criado através do comando netstat. Qual foi o resultado?
