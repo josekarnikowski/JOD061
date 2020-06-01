@@ -119,6 +119,8 @@ j) Gere uma build do jogo com a resolução 640x480 em modo janela (Windowed), s
 
 k) Execute a cena pelo Unity. Execuute a build pelos menos 5 vezes. Qual foi o resultado?
 
+A partir do 5ª player a conexão não acontece.
+
 l) Pare a execução do jogo.
 
 
